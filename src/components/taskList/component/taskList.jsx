@@ -1,9 +1,10 @@
 import TaskListItem from '../../taskListItem/container/taskListItem';
+import './taskList.css'
 
 export default function TaskList(props) {
   const { data, selectedTab } = props;
   return (
-    <ul>
+    <ul className='list'>
       {data
         ?.filter((i) => {
           switch (selectedTab) {

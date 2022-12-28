@@ -1,4 +1,19 @@
- .inactive {
-   text-decoration: line-through;
-   opacity: 0.5;
- }
+.task-list-item {
+  background-color: #F1BAA1;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 900px;
+  overflow: auto;
+  margin: 10px;
+}
+
+.inactive {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.task-list-item_button_wrapper {
+  display: flex;
+  column-gap: 10px;
+
+}

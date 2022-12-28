@@ -1,5 +1,6 @@
 import Button from '../../button/button';
 import { tabsItems } from '../../../constants';
+import './tabs.css'
 
 export default function Tabs(props) {
   const { selectedTab, changeTab } = props;
@@ -13,6 +14,7 @@ export default function Tabs(props) {
   }
   return (
     <div className="tabs_container">
+      <span>Show: </span>
       {tabsItemsEntries.map((i, index) => {
         let decoration = ' tab';
         if (i[0] === selectedTab) {

@@ -1,9 +1,11 @@
+import './input.css';
+
 export default function Input(props) {
   const { label, value, handleChange } = props;
   return (
-    <label>
+    <label className="label">
       {label}
-      <input type="text" value={value} onChange={handleChange} />
+      <input className="input" type="text" value={value} onChange={handleChange} />
     </label>
   );
 }

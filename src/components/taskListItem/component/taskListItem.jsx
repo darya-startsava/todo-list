@@ -25,20 +25,22 @@ export default function TaskListItem(props) {
   }
 
   return (
-    <li>
+    <li className="task-list-item">
       {isEditing ? (
-        <Form label={'Edit task'} onEdit={handleSubmitEditing} />
+        <Form label={'Edit task:'} onEdit={handleSubmitEditing} />
       ) : (
         <>
           <p className={status ? '' : 'inactive'} onClick={changeTaskStatus}>
             {children}
           </p>
-          <Button type="button" handleClick={handleEditing}>
-            Edit
-          </Button>
-          <Button type="button" handleClick={handleDeletion}>
-            Delete
-          </Button>
+          <div className="task-list-item_button_wrapper">
+            <Button type="button" handleClick={handleEditing}>
+              Edit task
+            </Button>
+            <Button type="button" handleClick={handleDeletion}>
+              Delete task
+            </Button>
+          </div>
         </>
       )}
     </li>

@@ -7,7 +7,7 @@ export default function TodoList() {
   return (
     <>
       <Header />
-      <Form label="Add new task" />
+      <Form label="Add new task:" />
       <Tabs />
       <TaskList />
     </>
