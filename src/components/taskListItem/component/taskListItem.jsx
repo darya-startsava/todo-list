@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import Button from '../../button/button';
 import Form from '../../form/container/form';
+import './taskListItem.css';
 
 export default function TaskListItem(props) {
   const [isEditing, setIsEditing] = useState(false);
-  const { children, index, editTask, deleteTask } = props;
+  const { children, index, status, editTask, deleteTask, changeStatus } = props;
 
   function handleEditing() {
     setIsEditing(true);
@@ -18,14 +19,20 @@ export default function TaskListItem(props) {
   function handleDeletion() {
     deleteTask(index);
   }
-  
+
+  function changeTaskStatus() {
+    changeStatus(index);
+  }
+
   return (
     <li>
       {isEditing ? (
         <Form label={'Edit task'} onEdit={handleSubmitEditing} />
       ) : (
         <>
-          <p>{children}</p>
+          <p className={status ? '' : 'inactive'} onClick={changeTaskStatus}>
+            {children}
+          </p>
           <Button type="button" handleClick={handleEditing}>
             Edit
           </Button>

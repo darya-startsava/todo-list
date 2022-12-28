@@ -31,5 +31,19 @@ export default function reducer(state = { nextTaskKey: 0, data: [] }, action) {
       data: newData,
     };
   }
+
+  if (action.type === 'CHANGE_TASK_STATUS') {const newData = [];
+  state.data.forEach((i) => {
+    if (i.key === action.index) {
+      newData.push({ ...i, isActive: !i.isActive });
+    } else {
+      newData.push(i);
+    }
+  });
+  return {
+    nextTaskKey: state.nextTaskKey,
+    data: newData,
+  };
+  }
   return state;
 }

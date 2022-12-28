@@ -5,7 +5,7 @@ export default function TaskList(props) {
   return (
     <ul>
       {data?.map((i) => (
-        <TaskListItem key={i.key} index={i.key}>
+        <TaskListItem key={i.key} index={i.key} status={i.isActive}>
           {i.text}
         </TaskListItem>
       ))}
