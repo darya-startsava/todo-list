@@ -1,9 +1,9 @@
 export default function Input(props) {
-  const { handleChange } = props;
+  const { label, value, handleChange } = props;
   return (
     <label>
-      Enter your name
-      <input type="text" onChange={handleChange} />
+      {label}
+      <input type="text" value={value} onChange={handleChange} />
     </label>
   );
 }

@@ -1,4 +1,8 @@
 export default function Button(props) {
-  const { type, children } = props;
-  return <button type={type}>{children}</button>;
+  const { type, children, handleClick } = props;
+  return (
+    <button type={type} onClick={handleClick}>
+      {children}
+    </button>
+  );
 }

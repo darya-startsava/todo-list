@@ -1,11 +1,10 @@
-
-import Form from '../form/form';
+import Form from '../form/container/form';
 
 export default function Home() {
   return (
     <>
       <h1>Home</h1>
-      <Form/>
+      <Form label="Enter your name" />
     </>
   );
 }
