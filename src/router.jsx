@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import TodoList from './components/todoList/container/todoList';
+import TodoList from './components/todoList/todoList';
 import Home from './components/home/home';
 
 export default function Router() {
