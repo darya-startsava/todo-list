@@ -6,7 +6,7 @@ export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="todo-list" element={<TodoList />} />
+      <Route path="list" element={<TodoList />} />
     </Routes>
   );
 }

@@ -21,8 +21,8 @@ export default function Form(props) {
     event.preventDefault();
     if (pathname === '/') {
       enterName(inputValue);
-      navigate('/todo-list');
-    } else if (pathname === '/todo-list') {
+      navigate('/list');
+    } else if (pathname === '/list') {
       if (label === labels.addNewTask) addNewTask(inputValue);
       if (label === labels.editTask) onEdit(inputValue);
     }
