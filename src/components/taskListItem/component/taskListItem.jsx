@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from '../../button/button';
 import Form from '../../form/container/form';
 import './taskListItem.css';
+import { labels } from '../../../constants';
 
 export default function TaskListItem(props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -27,7 +28,7 @@ export default function TaskListItem(props) {
   return (
     <li className="task-list-item">
       {isEditing ? (
-        <Form label={'Edit task:'} onEdit={handleSubmitEditing} index={index} />
+        <Form label={labels.editTask} onEdit={handleSubmitEditing} index={index} />
       ) : (
         <>
           <p className={status ? '' : 'inactive'} onClick={changeTaskStatus}>

@@ -3,6 +3,7 @@ import Input from '../../input/input';
 import Button from '../../button/button';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './form.css';
+import { labels } from '../../../constants';
 
 export default function Form(props) {
   const { addNewTask, enterName, label, onEdit, prevText } = props;
@@ -22,8 +23,8 @@ export default function Form(props) {
       enterName(inputValue);
       navigate('/todo-list');
     } else if (pathname === '/todo-list') {
-      if (label === 'Add new task:') addNewTask(inputValue);
-      if (label === 'Edit task:') onEdit(inputValue);
+      if (label === labels.addNewTask) addNewTask(inputValue);
+      if (label === labels.editTask) onEdit(inputValue);
     }
     setInputValue('');
   }
