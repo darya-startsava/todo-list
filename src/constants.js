@@ -1,0 +1,1 @@
+export const tabsItems = { all: 'All tasks', active: "Active tasks only", inactive: "Inactive tasks only" };

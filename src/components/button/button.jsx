@@ -1,7 +1,13 @@
+import './button.css'
+
 export default function Button(props) {
-  const { type, children, handleClick } = props;
+  const { type, children, handleClick, decoration } = props;
+  let buttonClass = 'button';
+  if (decoration) {
+    buttonClass += decoration;
+  }
   return (
-    <button type={type} onClick={handleClick}>
+    <button className={buttonClass} type={type} onClick={handleClick}>
       {children}
     </button>
   );

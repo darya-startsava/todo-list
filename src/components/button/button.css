@@ -1,0 +1,11 @@
+.button {
+  background-color: yellow;
+}
+
+.tab {
+  background-color: aqua;
+}
+
+.selected_tab {
+  background-color: blue;
+}

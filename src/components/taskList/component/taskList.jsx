@@ -1,14 +1,27 @@
 import TaskListItem from '../../taskListItem/container/taskListItem';
 
 export default function TaskList(props) {
-  const { data } = props;
+  const { data, selectedTab } = props;
   return (
     <ul>
-      {data?.map((i) => (
-        <TaskListItem key={i.key} index={i.key} status={i.isActive}>
-          {i.text}
-        </TaskListItem>
-      ))}
+      {data
+        ?.filter((i) => {
+          switch (selectedTab) {
+            case 'all':
+              return i;
+            case 'active':
+              return i.isActive;
+            case 'inactive':
+              return !i.isActive;
+            default:
+              return i;
+          }
+        })
+        .map((i) => (
+          <TaskListItem key={i.key} index={i.key} status={i.isActive}>
+            {i.text}
+          </TaskListItem>
+        ))}
     </ul>
   );
 }

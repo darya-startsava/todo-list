@@ -1,4 +1,5 @@
 import Form from '../../form/container/form';
+import Tabs from '../../tabs/container/tabs';
 import TaskList from '../../taskList/container/taskList';
 
 export default function TodoList(props) {
@@ -10,6 +11,7 @@ export default function TodoList(props) {
         <p>You have {count} active tasks.</p>
       </header>
       <Form label="Add new task" />
+      <Tabs />
       <TaskList />
     </>
   );
