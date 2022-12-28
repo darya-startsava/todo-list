@@ -3,10 +3,12 @@ import Button from '../../button/button';
 import Form from '../../form/container/form';
 import './taskListItem.css';
 import { labels } from '../../../constants';
+import { ReactComponent as EditIcon } from '../../../assets/edit-icon.svg';
+import { ReactComponent as DeleteIcon } from '../../../assets/delete-icon.svg';
 
 export default function TaskListItem(props) {
   const [isEditing, setIsEditing] = useState(false);
-  const { children, index, status, editTask, deleteTask, changeStatus} = props;
+  const { children, index, status, editTask, deleteTask, changeStatus } = props;
 
   function handleEditing() {
     setIsEditing(true);
@@ -36,9 +38,11 @@ export default function TaskListItem(props) {
           </p>
           <div className="task-list-item_button_wrapper">
             <Button type="button" handleClick={handleEditing}>
+              <EditIcon />
               Edit task
             </Button>
             <Button type="button" handleClick={handleDeletion}>
+              <DeleteIcon />
               Delete task
             </Button>
           </div>
