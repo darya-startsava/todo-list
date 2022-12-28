@@ -5,7 +5,7 @@ import './taskListItem.css';
 
 export default function TaskListItem(props) {
   const [isEditing, setIsEditing] = useState(false);
-  const { children, index, status, editTask, deleteTask, changeStatus } = props;
+  const { children, index, status, editTask, deleteTask, changeStatus} = props;
 
   function handleEditing() {
     setIsEditing(true);
@@ -27,7 +27,7 @@ export default function TaskListItem(props) {
   return (
     <li className="task-list-item">
       {isEditing ? (
-        <Form label={'Edit task:'} onEdit={handleSubmitEditing} />
+        <Form label={'Edit task:'} onEdit={handleSubmitEditing} index={index} />
       ) : (
         <>
           <p className={status ? '' : 'inactive'} onClick={changeTaskStatus}>

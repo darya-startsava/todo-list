@@ -5,11 +5,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import './form.css';
 
 export default function Form(props) {
-  const [inputValue, setInputValue] = useState('');
+  const { addNewTask, enterName, label, onEdit, prevText } = props;
+  const [inputValue, setInputValue] = useState(prevText);
   const navigate = useNavigate();
   const location = useLocation();
   const { pathname } = location;
-  const { addNewTask, enterName, label, onEdit } = props;
+
 
   function handleChange(event) {
     setInputValue(event.target.value);
