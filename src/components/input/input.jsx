@@ -1,4 +1,5 @@
 import './input.css';
+import { PropTypes } from 'prop-types';
 
 export default function Input(props) {
   const { label, value, handleChange } = props;
@@ -9,3 +10,9 @@ export default function Input(props) {
     </label>
   );
 }
+
+Input.propTypes = {
+  label: PropTypes.string,
+  value: PropTypes.string,
+  handleChange: PropTypes.func,
+};
