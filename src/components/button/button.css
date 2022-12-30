@@ -1,0 +1,15 @@
+.button {
+  background-color: #6D8C00;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 5px 10px;
+
+}
+
+.tab {
+  background-color: #F1BAA1
+}
+
+.selected_tab {
+  background-color: #BD613C
+}
