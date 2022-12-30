@@ -1,6 +1,7 @@
 import Button from '../../button/button';
 import { tabsItems } from '../../../constants';
-import './tabs.css'
+import './tabs.css';
+import { PropTypes } from 'prop-types';
 
 export default function Tabs(props) {
   const { selectedTab, changeTab } = props;
@@ -29,3 +30,8 @@ export default function Tabs(props) {
     </div>
   );
 }
+
+Tabs.propTypes = {
+  selectedTab: PropTypes.string,
+  changeTab: PropTypes.func,
+};

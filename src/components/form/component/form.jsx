@@ -4,6 +4,7 @@ import Button from '../../button/button';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './form.css';
 import { labels } from '../../../constants';
+import { PropTypes } from 'prop-types';
 
 export default function Form(props) {
   const { addNewTask, enterName, label, onEdit, prevText } = props;
@@ -11,7 +12,6 @@ export default function Form(props) {
   const navigate = useNavigate();
   const location = useLocation();
   const { pathname } = location;
-
 
   function handleChange(event) {
     setInputValue(event.target.value);
@@ -36,3 +36,11 @@ export default function Form(props) {
     </form>
   );
 }
+
+Form.propTypes = {
+  label: PropTypes.string,
+  prevText: PropTypes.string,
+  enterName: PropTypes.func,
+  onEdit: PropTypes.func,
+  addNewTask: PropTypes.func,
+};

@@ -1,4 +1,5 @@
-import './header.css'
+import './header.css';
+import { PropTypes } from 'prop-types';
 
 export default function Header(props) {
   const { name, count } = props;
@@ -13,3 +14,8 @@ export default function Header(props) {
     </header>
   );
 }
+
+Header.propTypes = {
+  name: PropTypes.string,
+  count: PropTypes.number,
+};

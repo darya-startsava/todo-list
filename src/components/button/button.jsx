@@ -1,4 +1,5 @@
-import './button.css'
+import './button.css';
+import { PropTypes } from 'prop-types';
 
 export default function Button(props) {
   const { type, children, handleClick, decoration } = props;
@@ -12,3 +13,10 @@ export default function Button(props) {
     </button>
   );
 }
+
+Button.propTypes = {
+  type: PropTypes.string,
+  decoration: PropTypes.string,
+  children: PropTypes.node,
+  handleClick: PropTypes.func,
+};

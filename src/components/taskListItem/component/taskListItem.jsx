@@ -5,6 +5,7 @@ import './taskListItem.css';
 import { labels } from '../../../constants';
 import { ReactComponent as EditIcon } from '../../../assets/edit-icon.svg';
 import { ReactComponent as DeleteIcon } from '../../../assets/delete-icon.svg';
+import { PropTypes } from 'prop-types';
 
 export default function TaskListItem(props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -51,3 +52,12 @@ export default function TaskListItem(props) {
     </li>
   );
 }
+
+TaskListItem.propTypes = {
+  index: PropTypes.number,
+  status: PropTypes.bool,
+  children: PropTypes.node,
+  editTask: PropTypes.func,
+  deleteTask: PropTypes.func,
+  changeStatus: PropTypes.func,
+};
